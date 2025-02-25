@@ -1,0 +1,30 @@
+<h1>Meu Primeiro Card com Angular Material</h1>
+
+<div class="cards-container">
+  <mat-card *ngFor="let card of cards" class="card">
+    <mat-card-header>
+      <mat-icon mat-card-avatar>{{card.icone}}</mat-icon>
+      <mat-card-title>{{card.titulo}}</mat-card-title>
+      <mat-card-subtitle>{{card.subtitulo}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="card.imagem" [alt]="card.titulo">
+
+    <mat-card-content>
+      <p>{{card.descricao}}</p>
+      <p *ngIf="card.curtidas > 0" class="curtidas">
+        <mat-icon>thumb_up</mat-icon>
+        {{card.curtidas}} curtidas
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button (click)="curtir(card)">
+        <mat-icon>thumb_up</mat-icon> Curtir
+      </button>
+      <button mat-button (click)="compartilhar(card)">
+        <mat-icon>share</mat-icon> Compartilhar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
