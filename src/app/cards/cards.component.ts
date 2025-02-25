@@ -18,31 +18,19 @@ interface Card {
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css'],
   standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule
-  ]
+  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule],
 })
 export class CardsComponent {
   cards: Card[] = [
     {
-      titulo: 'Melhor time do mundo',
-      subtitulo: 'Corinthians',
-      imagem: 'https://a.espncdn.com/i/teamlogos/soccer/500/874.png',
-      descricao: 'Esse time é o melhor do mundo.',
+      titulo: 'Amir GOAT SUPREMO',
+      subtitulo: 'AMIR feito diferente',
+      imagem:
+        'https://yt3.googleusercontent.com/YuCnBDa_mJZUbWEfQ6UKHvIKMZYFDthLTMLCjwqnahWLPse1wwS-ESBL_kFNDhRyZPN0SuX5cA=s900-c-k-c0x00ffffff-no-rj',
+      descricao: 'Réis Réis',
       curtidas: 0,
-      icone: 'favorite'
+      icone: 'favorite',
     },
-    {
-      titulo: 'Pior time do mundo',
-      subtitulo: 'Palmeiras',
-      imagem: 'https://logodownload.org/wp-content/uploads/2015/05/palmeiras-logo-4.png',
-      descricao: 'Esse time é o pior do mundo, e não tem mundial.',
-      curtidas: 0,
-      icone: 'star'
-    }
   ];
 
   curtir(card: Card): void {
